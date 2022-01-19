@@ -7,7 +7,7 @@ from .models import Product, ProductCategory
 
 def main(request):
     title = "главная"
-    
+
     products = Product.objects.all()
 
     content = {"title": title, "products": products, "media_url": settings.MEDIA_URL}
