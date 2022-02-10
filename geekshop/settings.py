@@ -21,7 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-e$5ma*oz4t4pf@+2wcmyv_wswqzk6yqn%v$g@fp&3g$!c5s@81"
+SECRET_KEY = (
+    "django-insecure-e$5ma*oz4t4pf@+2wcmyv_wswqzk6yqn%v$g@fp&3g$!c5s@81"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -138,3 +140,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# Set login path:
+#   https://docs.djangoproject.com/en/3.2/ref/settings/#login-url
+LOGIN_URL = "authnapp:login"
